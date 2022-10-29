@@ -1,0 +1,58 @@
+# Java
+
+
+package AddTwoNumber;
+
+import java.util.Scanner;
+
+public class test {
+
+    public static void main(String[] args) {
+
+        System.out.println("Enter A number :");
+        Scanner sn = new Scanner(System.in);
+        int number = sn.nextInt();
+        Add obj = new Add(number);
+        obj.Display();
+
+    }
+
+}
+
+
+
+///////
+
+
+package AddTwoNumber;
+
+public class Add {
+
+    int number;
+    int count = 0;
+
+    public Add(int n) 
+    {
+        this.number = n;
+
+        for (int i = 1; i <= number; i++) 
+        {
+            if (number % i == 0)
+            {
+                count++;
+            }
+        }
+
+    }
+
+    void Display() {
+
+        if (count == 2) {
+            System.out.println(number + " Is prime number ");
+        } else {
+            System.out.println("Not a prime number ");
+        }
+
+    }
+
+}
